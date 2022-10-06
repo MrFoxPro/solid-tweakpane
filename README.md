@@ -4,9 +4,11 @@
 
 Currently it can be used with mutable.
 Example:
+
 ```tsx
 const settings = createMutable({
     bool: false,
+    current: 0.01,
     folder1: {
         bool: true,
         folder11: {
@@ -22,7 +24,29 @@ const settings = createMutable({
                 label: 'test',
             }}
             key="bool"
-            onChange={(e) => console.log('changed value', e.value)}
+            onChange={(e) => console.log('changed value test', e.value)}
+        />
+        <TWPButton title={'Title can be reactive too!'} />
+        <TWPSeparator />
+        <TWPTab>
+            <TWPTabPage title="page1">
+                <TWPBindGroup target={settings.folder1}>
+                <TWPInput key="bool" />
+                </TWPBindGroup>
+            </TWPTabPage>
+            <TWPTabPage title="page2">
+                <TWPBindGroup target={settings.folder1.folder11}>
+                <TWPInput key="color" />
+                </TWPBindGroup>
+            </TWPTabPage>
+        </TWPTab>
+        <TWPMonitor
+            key="current"
+            params={{
+                view: 'graph',
+                min: -1,
+                max: +1,
+            }}
         />
     </TWPBindGroup>
 </Tweakpane>
