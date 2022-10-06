@@ -8,6 +8,7 @@ import {
   createEffect,
   createContext,
   useContext,
+  children,
   onMount,
 } from 'solid-js'
 import { TWPBaseProps, TWPGroup, useTWPRoot } from './base'

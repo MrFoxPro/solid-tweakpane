@@ -7,14 +7,12 @@ const extensions = ['.ts', '.tsx', '.js']
 
 /** @type {import('rollup').OutputOptions} */
 const output = {
-  manualChunks: {
-    tweakpane: ['tweakpane', '@tweakpane/core'],
-  },
+
 }
 /** @type {import('rollup').RollupOptions} */
 const config = {
   input: 'src/index.ts',
-  external: ['solid-js'],
+  external: ['solid-js', 'tweakpane', '@tweakpane/core'],
   treeshake: 'smallest',
   output: [
     {
