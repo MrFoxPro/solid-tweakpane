@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "sourceMap": false,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "outDir": "./types",
+    "skipDefaultLibCheck": true
+  },
+  "exclude": ["node_modules", "dist", "./src/example"],
+  "include": ["./src"]
+}
