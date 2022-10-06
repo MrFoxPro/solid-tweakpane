@@ -2,7 +2,7 @@ import { createContext, FlowProps, onCleanup, splitProps, useContext } from 'sol
 import { Pane } from 'tweakpane'
 import type { PaneConfig } from 'tweakpane/dist/types/pane/pane-config'
 import type { Bindable, BladeApi } from '@tweakpane/core'
-import { BladeRackApi } from '@tweakpane/core/dist/cjs/blade/common/api/blade-rack'
+import type { BladeRackApi } from '@tweakpane/core/dist/cjs/blade/common/api/blade-rack'
 
 export type TWPBaseProps<T extends BladeApi<any> | BladeRackApi> = {
   ref?: (e: T) => void
