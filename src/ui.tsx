@@ -41,8 +41,12 @@ export const TWPFolder = createTWPUI<ParentProps<FolderParams>>((root, props) =>
   return [folder, <TWPGroup root={folder}>{compProps.children}</TWPGroup>]
 })
 
-export const TWPButton = createTWPUI<VoidProps<FolderParams>>((root, props) => {
+type TWPButtonProps = {
+  onClick?: Parameters<ButtonApi['on']>[1]
+} & FolderParams
+export const TWPButton = createTWPUI<TWPButtonProps>((root, props) => {
   const button = root.addButton(props)
+  props.onClick && button.on('click', props.onClick)
   createEffect(() => {
     button.title = props.title
   })
