@@ -1,6 +1,6 @@
 {
   "name": "solid-tweakpane",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Solid components for Tweakpane library",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
