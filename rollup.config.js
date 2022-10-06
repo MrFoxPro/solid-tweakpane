@@ -41,9 +41,9 @@ const config = {
     commonjs({
       extensions,
     }),
-    // strip({
-    //   include: /\.(js|mjs|ts|tsx|jsx)/,
-    // }),
+    strip({
+      include: /\.(js|mjs|ts|tsx|jsx)/,
+    }),
     del({ targets: 'dist/*' }),
   ],
 }

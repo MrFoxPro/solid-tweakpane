@@ -3,6 +3,7 @@
 `pnpm i -S solid-tweakpane solid-js`
 
 Currently it can be used with mutable.
+You need to place all elements into <TWPBindGroup> and provide target.
 Example:
 
 ```tsx
@@ -50,9 +51,8 @@ const settings = createMutable({
         />
     </TWPBindGroup>
 </Tweakpane>
-
-You need to place all elements into <TWPBindGroup> and provide target.
 ```
+![alt](https://i.imgur.com/kK7IPX8.png)
 
 It's possible to automatically build Pane from mutable with `<TWPAutoMutable>`:
 
@@ -71,3 +71,4 @@ const settings = createMutable({
     <TWPAutoMutable target={settings} />
 </Tweakpane>
 ```
+![alt](https://i.imgur.com/9mlRCMu.png)
