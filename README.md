@@ -1,7 +1,27 @@
-# Solid components for [Tweakpane](https://cocopon.github.io/tweakpane/)
-
 `pnpm i -S solid-tweakpane solid-js`
 
+## Without binding
+`initialValue` prop required in this case.
+```tsx
+<Tweakpane>
+      <TWPInput
+         params={{
+            step: 0.1,
+            max: 5,
+            min: 1,
+         }}
+         initialValue={1}
+         onChange={(e) => console.log(e.value)}
+      />
+   <TWPButton
+      title="Flush drawings"
+      onClick={() => {
+         // ...
+      }}
+   />
+</Tweakpane>
+```
+## With binding
 Currently it can be used with mutable.
 You need to place all elements into <TWPBindGroup> and provide target.
 Example:

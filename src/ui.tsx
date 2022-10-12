@@ -11,7 +11,7 @@ import {
   onMount,
 } from 'solid-js'
 import { Tweakpane, TWPBaseProps, TWPGroup, useTWPRoot } from './base'
-import { FolderApi, FolderParams, TabParams, SeparatorParams } from 'tweakpane'
+import type { FolderApi, FolderParams, TabParams, SeparatorParams } from 'tweakpane'
 import type { ButtonApi, SeparatorApi, TabApi, TabPageParams } from '@tweakpane/core'
 import type { BladeRackApi } from '@tweakpane/core/dist/cjs/blade/common/api/blade-rack'
 
