@@ -8,6 +8,8 @@ specifiers:
   '@rollup/plugin-node-resolve': ^14.1.0
   '@rollup/plugin-strip': ^2.1.0
   '@tweakpane/core': ^1.1.0
+  '@types/ts-nameof': ^4.2.1
+  babel-plugin-ts-nameof: ^4.2.1
   babel-preset-solid: ^1.5.7
   babel-preset-typescript: 7.0.0-alpha.19
   prettier: ^2.7.1
@@ -18,6 +20,7 @@ specifiers:
   typescript: ^4.8.4
 
 dependencies:
+  '@tweakpane/core': 1.1.0
   tweakpane: 3.1.0
 
 devDependencies:
@@ -27,7 +30,8 @@ devDependencies:
   '@rollup/plugin-commonjs': 22.0.2_rollup@2.79.1
   '@rollup/plugin-node-resolve': 14.1.0_rollup@2.79.1
   '@rollup/plugin-strip': 2.1.0_rollup@2.79.1
-  '@tweakpane/core': 1.1.0
+  '@types/ts-nameof': 4.2.1
+  babel-plugin-ts-nameof: 4.2.1
   babel-preset-solid: 1.5.7_@babel+core@7.19.3
   babel-preset-typescript: 7.0.0-alpha.19
   prettier: 2.7.1
@@ -481,9 +485,26 @@ packages:
       rollup: 2.79.1
     dev: true
 
+  /@ts-nameof/common/4.2.1:
+    resolution: {integrity: sha512-bWwYOFTTd6Nq7RUqJalIii1su3OyR+N1W0smp5PzHGUVycHuJ7MRiyCQrWgMt1lbbp3GY6cvCttm7Zo5E7A1xQ==}
+    dev: true
+
+  /@ts-nameof/transforms-babel/4.2.1:
+    resolution: {integrity: sha512-4BG5+55JXI3bLzoEqHKPQm5t4JgK2Ae1chAD7w5jDdMI8j1mWqVeonMjNMNIm28dMYs41Qvep25/5hpg24JyOw==}
+    dependencies:
+      '@ts-nameof/common': 4.2.1
+      '@ts-nameof/transforms-common': 4.2.1
+    dev: true
+
+  /@ts-nameof/transforms-common/4.2.1:
+    resolution: {integrity: sha512-mg6nkkHqNlKU1B15pEtiikSKadJSOxFFWpi7tEVB7Yhjx0PhoTcSe7oxK0fXHZGeoTGF2SMZjmCsGnbtfcgk6w==}
+    dependencies:
+      '@ts-nameof/common': 4.2.1
+    dev: true
+
   /@tweakpane/core/1.1.0:
     resolution: {integrity: sha512-vbbiQb+aoFI13lIbE7DJvhHZVE1YlUpGoaAamSpU6wLp2jA3VowS1wfRJBBB8IBCYm7nF6ULl7zfJKxl1XdyfA==}
-    dev: true
+    dev: false
 
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
@@ -512,6 +533,10 @@ packages:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
       '@types/node': 18.8.2
+    dev: true
+
+  /@types/ts-nameof/4.2.1:
+    resolution: {integrity: sha512-NgMmD70b8NwX6BYhKh70xWkquAow6iq3kRAPp4sMAk4Mre9PrqZgvpq5+JbDLWIJPc4Q9ctkwSQjVAOlfuvlyQ==}
     dev: true
 
   /aggregate-error/3.1.0:
@@ -558,6 +583,12 @@ packages:
     resolution: {integrity: sha512-OtkOYcYRffmC38/UjDZn2cvM2qarqDT748TbSJtVpNb7EvDLQcfPn9+0adk8oqmhc0lk+Ldy/2daGMNMxW0vuQ==}
     dependencies:
       babel-plugin-syntax-typescript: 7.0.0-alpha.19
+    dev: true
+
+  /babel-plugin-ts-nameof/4.2.1:
+    resolution: {integrity: sha512-otoDlZLYyc3SzwDWYYtseeMnfp2V5YZPrCqKpo2aqyi56AvszpFfVrrj9+d24Ma/c0gtLgtEhaHgGZ6wLLVa3A==}
+    dependencies:
+      '@ts-nameof/transforms-babel': 4.2.1
     dev: true
 
   /babel-preset-solid/1.5.7_@babel+core@7.19.3:

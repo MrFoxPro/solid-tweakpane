@@ -1,5 +1,5 @@
 import { createEffect, on, onCleanup, JSX, VoidProps } from 'solid-js'
-import { TWPBaseProps, useTWPBingGroup, useTWPRoot } from './base'
+import { Tweakpane, TWPBaseProps, TWPBindGroup, useTWPBingGroup, useTWPRoot } from './base'
 import { Bindable } from '@tweakpane/core'
 import { InputBindingApi, MonitorBindingApi, InputParams, MonitorParams } from 'tweakpane'
 import type { BladeRackApi } from '@tweakpane/core/dist/cjs/blade/common/api/blade-rack'
@@ -22,9 +22,9 @@ function createTWPControl<TInitProps, TProps extends TWPControlBaseProps = TInit
 ) {
   return function (props: TProps) {
     const root = useTWPRoot()
-    if (!root) throw new Error('Use tweakpane controls within <Tweakpane>')
+    if (!root) throw new Error(`Use tweakpane controls within <${nameof(Tweakpane)}>`)
     const binding = props.target ?? useTWPBingGroup()
-    if (!binding) throw new Error('Use tweakpane controls within <TweakpaneBindGroup>')
+    if (!binding) throw new Error(`Use tweakpane controls within <${nameof(TWPBindGroup)}>`)
     if (!Object.hasOwn(binding, props.key)) {
       throw new Error(`There is no key ${props.key} in binding ${binding}`)
     }

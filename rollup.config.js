@@ -6,9 +6,7 @@ import del from 'rollup-plugin-delete'
 const extensions = ['.ts', '.tsx', '.js']
 
 /** @type {import('rollup').OutputOptions} */
-const output = {
-
-}
+const output = {}
 /** @type {import('rollup').RollupOptions} */
 const config = {
   input: 'src/index.ts',
@@ -34,6 +32,7 @@ const config = {
       extensions,
       babelHelpers: 'bundled',
       presets: ['solid', '@babel/preset-typescript'],
+      plugins: ['babel-plugin-ts-nameof'],
       exclude: /node_modules\//,
     }),
     commonjs({

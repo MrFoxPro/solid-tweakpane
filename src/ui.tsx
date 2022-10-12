@@ -10,7 +10,7 @@ import {
   useContext,
   onMount,
 } from 'solid-js'
-import { TWPBaseProps, TWPGroup, useTWPRoot } from './base'
+import { Tweakpane, TWPBaseProps, TWPGroup, useTWPRoot } from './base'
 import { FolderApi, FolderParams, TabParams, SeparatorParams } from 'tweakpane'
 import type { ButtonApi, SeparatorApi, TabApi, TabPageParams } from '@tweakpane/core'
 import type { BladeRackApi } from '@tweakpane/core/dist/cjs/blade/common/api/blade-rack'
@@ -24,7 +24,7 @@ function createTWPUI<TInitProps, TProps extends TWPUIBaseProps = TInitProps & TW
 ) {
   return function (props: TProps) {
     const root = useTWPRoot()
-    if (!root) throw new Error('Use tweakpane controls within <Tweakpane>')
+    if (!root) throw new Error(`Use tweakpane controls within <${nameof(Tweakpane)}>`)
     const [comp, element] = initFn(root, props)
     onCleanup(() => {
       if (!comp) return
@@ -69,7 +69,7 @@ export const TWPTab = createTWPUI<FlowProps<Omit<TabParams, 'pages'>>>((root, pr
 
 export function TWPTabPage(props: ParentProps<TabPageParams>) {
   const root = useTab()
-  if (!root) throw new Error('Parent for <TWPTabPage> should be <TWPTab>')
+  if (!root) throw new Error(`Parent for <${nameof(TWPTabPage)}> should be <${nameof(TWPTab)}>`)
   const [compProps, pageProps] = splitProps(props, ['children'])
   const page = root.addPage(pageProps)
   createEffect(() => (page.title = props.title))
