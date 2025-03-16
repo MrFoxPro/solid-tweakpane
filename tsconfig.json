@@ -1,18 +1,18 @@
 {
-  "compilerOptions": {
-    "emitDeclarationOnly": true,
-    "declaration": true,
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
-    "sourceMap": false,
-    "target": "ESNext",
-    "module": "ESNext",
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "Node",
-    "outDir": "./dist",
-    "skipDefaultLibCheck": true
-  },
-  "exclude": ["node_modules", "dist", "./src/example"],
-  "include": ["./src"]
+	"compilerOptions": {
+		"emitDeclarationOnly": true,
+		"declaration": true,
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
+		"sourceMap": false,
+		"target": "ESNext",
+		"module": "ESNext",
+		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "Node",
+		"outDir": "./dist",
+		"skipDefaultLibCheck": true
+	},
+	"exclude": ["node_modules", "dist", "./src/example"],
+	"include": ["./src"]
 }
