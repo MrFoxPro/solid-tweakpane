@@ -28,7 +28,7 @@ function createTWPControl<TInitProps, TProps extends TWPControlBaseProps = TInit
 			throw new Error(
 				`In case of usage <TWPControl> with key, place it within <${nameof(
 					TWPBindGroup
-				)}> and provide taget`
+				)}> and provide target`
 			)
 		}
 		if (binding && !Object.hasOwn(binding, props.key)) {
